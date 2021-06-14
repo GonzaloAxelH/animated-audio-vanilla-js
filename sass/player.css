@@ -7,7 +7,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
-
+*{  
+}
 body {
   background: #f6f6c4;
   overflow: hidden;
@@ -47,11 +48,13 @@ article {
   margin-left: -163px;
   top: 0;
   top: 19px;
+  transition: 1s all;
+
 }
 
 .player__spinner-wrap.pulse{
   animation:pulse linear 0.5s;
-
+  transition: 1s all;
 }
 
 .player__spinner-wrap * {
@@ -66,37 +69,45 @@ article {
   margin-left: -163px;
   border-radius: 50%;
   background: url('../assets/spinner-outer.png') center center no-repeat #32302e;
+  transition: 1s all;
 }
 
            .player__spinner-wrap.playing   .player__spinner-outer{
-              animation:spin-cw infinite linear 5s;
+              animation:spin-cw infinite linear 3.5s;
             }
 
         .player__spinner-wrap.playing   .player__spinner-center{
-              animation:spin-cw-reverse infinite linear 2.0s;
+              animation:spin-cw-reverse infinite linear 3s;
             }
             @keyframes spin-cw{
               from {
                 transform: rotate(0deg); 
+                transition: 1s all;
               }
               to{
                 transform: rotate(360deg); 
+                transition: 1s all;
               }
             }
           @keyframes spin-cw-reverse{
               from {
                 transform: rotate(360deg); 
+                transition: 1s all;
               }
               to{
                 transform: rotate(0deg); 
+                transition: 1s all;
               }
             }
             @keyframes pulse{
               from{
-                transform: scale(1.3);
+                transform: scale(1.2) ;
+                
+                transition: 1s all;
               } 
               to{
-                transform: scale(1);
+                transform: scale(0.6) ;
+                transition: 1s all;
               }
             }
 
@@ -113,6 +124,7 @@ article {
   top: 50%;
   margin: -99px;
   pointer-events: none;
+  transition: 1s all;
 }
 .player__play-sprite {
   position: absolute;
@@ -122,10 +134,13 @@ article {
   background: url('../assets/play-sprite.png') 0px 0px no-repeat;
   height: 70px;
   width: 70px;
+ transition: 1s all;
 }
 
 .player__spinner-wrap.playing   .player__play-sprite{
   background-position:0px -70px;
+  
+ transition: 1s all;
 }
 
 
